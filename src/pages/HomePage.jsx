@@ -6,7 +6,7 @@ import About from '../components/About';
 import ProductsProses from '../components/ProductsProses';
 import Products from "../components/Products";
 import Assesments from '../components/Assesments';
-import fotoDaun from '../assets/Image/foto_daun.jpg';
+import fotoDaun from '../assets/foto_daun.jpg';
 
 
 const HomePage = () => {
@@ -40,7 +40,7 @@ const HomePage = () => {
 
             <Box flex="1" width="100%">
               <Image 
-                src="src\assets\Image\foto_awal.png"
+                src="/image/foto_awal.png"
                 alt="VND Ceper Industries"
                 boxSize="400px"
                 objectFit="cover"

@@ -4,22 +4,22 @@ import { ArrowLeftIcon, ArrowRightIcon } from "@chakra-ui/icons";
 
 // Array of assessment image URLs
 const assesments = [
-  "/src/assets/Image/Assesment_1.jpg",
-  "/src/assets/Image/Assesment_2.jpg",
-  "/src/assets/Image/Assesment_3.jpg",
-  "/src/assets/Image/Assesment_4.jpg",
-  "/src/assets/Image/Assesment_5.jpg",
-  "/src/assets/Image/Assesment_6.jpg",
-  "/src/assets/Image/Assesment_7.jpg",
-  "/src/assets/Image/Assesment_8.jpg",
-  "/src/assets/Image/Assesment_9.jpg",
-  "/src/assets/Image/Assesment_10.jpg",
-  "/src/assets/Image/Assesment_11.jpg",
-  "/src/assets/Image/Assesment_12.jpg",
-  "/src/assets/Image/Assesment_13.jpg",
-  "/src/assets/Image/Assesment_14.jpg",
-  "/src/assets/Image/Assesment_15.jpg",
-  "/src/assets/Image/Assesment_16.jpg"
+  "/image/Assesment_1.jpg",
+  "/image/Assesment_2.jpg",
+  "/image/Assesment_3.jpg",
+  "/image/Assesment_4.jpg",
+  "/image/Assesment_5.jpg",
+  "/image/Assesment_6.jpg",
+  "/image/Assesment_7.jpg",
+  "/image/Assesment_8.jpg",
+  "/image/Assesment_9.jpg",
+  "/image/Assesment_10.jpg",
+  "/image/Assesment_11.jpg",
+  "/image/Assesment_12.jpg",
+  "/image/Assesment_13.jpg",
+  "/image/Assesment_14.jpg",
+  "/image/Assesment_15.jpg",
+  "/image/Assesment_16.jpg"
 ];
 
 const Assesments = () => {

@@ -33,7 +33,7 @@ function Navbar() {
       <Flex alignItems="center" maxW="1440px" mx="auto">
         <HStack spacing={4}>
           <Link as={RouterLink} to="/" _hover={{ textDecoration: 'none' }} display="flex" alignItems="center">
-            <Image src="/src\assets\Image\logo_vnd-removebg-preview.png" alt="VND Ceper Industries Logo" boxSize="50px" mr={2} mb={1.5} width={200} />
+          <Image src="/image/logo_vnd-removebg-preview.png" alt="VND Ceper Industries Logo" boxSize="50px" mr={2} mb={1.5} width={200} />
             <Heading
               as="h1"
               size="lg"
