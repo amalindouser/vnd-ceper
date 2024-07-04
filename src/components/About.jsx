@@ -38,7 +38,7 @@ const ImageGallery = () => {
   ];
 
   return (
-    <Box p={8} bg="#1D566E" borderRadius="md" textAlign="center">
+    <Box p={8} bg="" borderRadius="md"  mb={8}>
       <Heading
         as="h2"
         size="xl"

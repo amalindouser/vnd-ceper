@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Heading, Image, Grid, GridItem } from '@chakra-ui/react';
+import { Box, Heading, Grid, GridItem } from '@chakra-ui/react';
 
 const Products = () => {
   const products = [
@@ -27,21 +27,19 @@ const Products = () => {
         Production Process
       </Heading>
       <Grid
-        templateColumns="repeat(auto-fit, minmax(150px, 1fr))" 
+        templateColumns="repeat(auto-fit, minmax(150px, 1fr))"
         gap={4}
         justifyContent="center"
-        maxW="800px"
-        mx="auto"
-        marginTop={10}
+        maxWidth="800px"
+        marginX="auto"
+        overflowX="auto"
       >
         {products.map((product) => (
           <GridItem key={product.id} textAlign="center">
-            <Image
+            <img
               src={product.src}
               alt={`Gambar Produk ${product.id}`}
-              borderRadius="md"
-              boxSize="200px" // Ukuran tetap untuk responsif
-              objectFit="cover"
+              style={{ maxWidth: '100%', height: 'auto', borderRadius: '8px' }}
             />
           </GridItem>
         ))}
