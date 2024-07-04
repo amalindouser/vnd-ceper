@@ -1,29 +1,36 @@
 import React from 'react';
 import { Box, Heading, Text, Image, Grid, GridItem } from '@chakra-ui/react';
+import { motion } from 'framer-motion';
 
 const About = () => {
   return (
-    <Box p={8} bg="" borderRadius="md"  mb={8}>
-      <Heading
-        as="h2"
-        size="xl"
-        mb={4}
-        fontFamily="'Emblema One', cursive"
-        textColor='white'
-        textAlign="center"
-        textShadow="2px 2px 4px rgba(0, 0, 0, 0.4)" 
+    <Box p={8} bg="" borderRadius="md" mb={8}>
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
       >
-        Tentang Kami
-      </Heading>
-      <Text mb={4} textColor='white' textAlign="center">
-        VND Ceper Industries, yang berlokasi di Yogyakarta, adalah solusi terbaik untuk kebutuhan pakaian jadi Anda. Kami menawarkan berbagai jenis pakaian dengan kualitas produksi yang tinggi dan desain yang beragam, termasuk kaos, polo shirt, kemeja, jaket, dan masih banyak lagi. Dengan pengalaman yang luas di industri konveksi, kami berkomitmen untuk memberikan produk dengan kualitas yang terjamin.
-      </Text>
-      <Text mb={4} textColor='white' textAlign="center">
-        Setiap pakaian yang kami produksi melewati proses kontrol kualitas yang ketat untuk memastikan kepuasan pelanggan. Kami menyediakan berbagai pilihan desain yang dapat disesuaikan dengan kebutuhan dan preferensi Anda. Bertahun-tahun di industri ini membuat kami memahami kebutuhan pelanggan dan selalu berusaha untuk memberikan yang terbaik.
-      </Text>
-      <Text textColor='white' textAlign="center" fontWeight="bold">
-        Jadikan VND Ceper Industries pilihan Anda untuk pakaian berkualitas tinggi dengan desain yang menawan. Hubungi kami sekarang dan temukan pakaian yang sempurna untuk Anda!
-      </Text>
+        <Heading
+          as="h2"
+          size="xl"
+          mb={4}
+          fontFamily="'Emblema One', cursive"
+          textColor='white'
+          textAlign="center"
+          textShadow="2px 2px 4px rgba(0, 0, 0, 0.4)"
+        >
+          Tentang Kami
+        </Heading>
+        <Text mb={4} textColor='white' textAlign="center">
+          VND Ceper Industries, yang berlokasi di Yogyakarta, adalah solusi terbaik untuk kebutuhan pakaian jadi Anda. Kami menawarkan berbagai jenis pakaian dengan kualitas produksi yang tinggi dan desain yang beragam, termasuk kaos, polo shirt, kemeja, jaket, dan masih banyak lagi. Dengan pengalaman yang luas di industri konveksi, kami berkomitmen untuk memberikan produk dengan kualitas yang terjamin.
+        </Text>
+        <Text mb={4} textColor='white' textAlign="center">
+          Setiap pakaian yang kami produksi melewati proses kontrol kualitas yang ketat untuk memastikan kepuasan pelanggan. Kami menyediakan berbagai pilihan desain yang dapat disesuaikan dengan kebutuhan dan preferensi Anda. Bertahun-tahun di industri ini membuat kami memahami kebutuhan pelanggan dan selalu berusaha untuk memberikan yang terbaik.
+        </Text>
+        <Text textColor='white' textAlign="center" fontWeight="bold">
+          Jadikan VND Ceper Industries pilihan Anda untuk pakaian berkualitas tinggi dengan desain yang menawan. Hubungi kami sekarang dan temukan pakaian yang sempurna untuk Anda!
+        </Text>
+      </motion.div>
     </Box>
   );
 };
@@ -38,39 +45,45 @@ const ImageGallery = () => {
   ];
 
   return (
-    <Box p={8} bg="" borderRadius="md"  mb={8}>
-      <Heading
-        as="h2"
-        size="xl"
-        mb={6}
-        fontFamily="'Emblema One', cursive"
-        textColor='white'
-        textAlign="center"
-        textShadow="2px 2px 4px rgba(0, 0, 0, 0.4)" 
+    <Box p={8} bg="" borderRadius="md" mb={8}>
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
       >
-        Kenapa Memilih Kami?
-      </Heading>
-      <Grid
-        templateColumns="repeat(auto-fit, minmax(150px, 1fr))" 
-        gap={4}
-        justifyContent="center"
-        maxW="1200px" 
-        mx="auto" 
-      >
-        {images.map((image, index) => (
-          <GridItem key={index} textAlign="center">
-            <Image
-              src={image.src}
-              alt={image.alt}
-              borderRadius="md"
-              width="100%" 
-              height="150px"
-              objectFit="cover"
-            />
-            <Text mt={2} textColor="white" fontSize="sm">{image.caption}</Text>
-          </GridItem>
-        ))}
-      </Grid>
+        <Heading
+          as="h2"
+          size="xl"
+          mb={6}
+          fontFamily="'Emblema One', cursive"
+          textColor='white'
+          textAlign="center"
+          textShadow="2px 2px 4px rgba(0, 0, 0, 0.4)"
+        >
+          Kenapa Memilih Kami?
+        </Heading>
+        <Grid
+          templateColumns="repeat(auto-fit, minmax(150px, 1fr))" 
+          gap={4}
+          justifyContent="center"
+          maxW="1200px" 
+          mx="auto" 
+        >
+          {images.map((image, index) => (
+            <GridItem key={index} textAlign="center">
+              <Image
+                src={image.src}
+                alt={image.alt}
+                borderRadius="md"
+                width="100%" 
+                height="150px"
+                objectFit="cover"
+              />
+              <Text mt={2} textColor="white" fontSize="sm">{image.caption}</Text>
+            </GridItem>
+          ))}
+        </Grid>
+      </motion.div>
     </Box>
   );
 };

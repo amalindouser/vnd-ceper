@@ -2,6 +2,7 @@ import React from 'react';
 import { Box, Flex, Heading, Text, Button, Image, IconButton, Link, Grid, GridItem } from '@chakra-ui/react';
 import { Link as ScrollLink, Element } from 'react-scroll';
 import { FaWhatsapp } from 'react-icons/fa';
+import { motion } from 'framer-motion';
 import About from '../components/About';
 import ProductsProses from '../components/ProductsProses';
 import Products from "../components/Products";
@@ -51,10 +52,18 @@ const HomePage = () => {
                   objectFit="cover"
                   borderRadius={10}
                   width="100%"
+                  as={motion.img}
+                  initial={{ opacity: 0, y: 50 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6 }}
                 />
               </GridItem>
               <GridItem>
-                <Box textAlign="left" p={4}>
+                <Box textAlign="left" p={4} as={motion.div}
+                  initial={{ opacity: 0, y: 50 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6 }}
+                >
                   <Heading as="h1" size="2xl" mb={4} fontFamily="'Emblema One', cursive" textColor="white">
                     Selamat Datang di VND Ceper Industries
                   </Heading>
@@ -74,27 +83,51 @@ const HomePage = () => {
       </Element>
 
       <Element name="about">
-        <Box backgroundColor="#1D566E" padding="8px" width="100%">
-          <About />
-        </Box>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          <Box backgroundColor="#1D566E" padding="8px" width="100%">
+            <About />
+          </Box>
+        </motion.div>
       </Element>
 
       <Element name="productsproses">
-        <Box backgroundColor="white" padding="8px" width="100%">
-          <ProductsProses />
-        </Box>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          <Box backgroundColor="white" padding="8px" width="100%">
+            <ProductsProses />
+          </Box>
+        </motion.div>
       </Element>
 
       <Element name="products">
-        <Box backgroundColor="#1D566E" padding="8px" width="100%">
-          <Products />
-        </Box>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          <Box backgroundColor="#1D566E" padding="8px" width="100%">
+            <Products />
+          </Box>
+        </motion.div>
       </Element>
 
       <Element name="assesment">
-        <Box backgroundColor="white" padding="8px" width="100%">
-          <Assesments />
-        </Box>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          <Box backgroundColor="white" padding="8px" width="100%">
+            <Assesments />
+          </Box>
+        </motion.div>
       </Element>
 
       {/* Tombol WhatsApp di pojok kanan bawah */}
