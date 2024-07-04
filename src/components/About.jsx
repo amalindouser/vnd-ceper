@@ -30,11 +30,11 @@ const About = () => {
 
 const ImageGallery = () => {
   const images = [
-    { src: '../public/about/Gambar_1.png', alt: 'Keterangan gambar 1', caption: 'VND Ceper didukung oleh tenaga ahli yang berpengalaman dibidang clothing dan konveksi.' },
-    { src: '../public/about/Gambar_2.png', alt: 'Keterangan gambar 2', caption: 'Didukung dengan alat sablon dan mesin jahit yang modern menghasilkan produk yang berkualitas.' },
-    { src: '../public/about/Gambar_3.png', alt: 'Keterangan gambar 3', caption: 'Hasil berkualitas dan mampu mencukupi kebutuhan produksi kalian.' },
-    { src: '../public/about/Gambar_4.png', alt: 'Keterangan gambar 4', caption: 'Kami berusaha menyelesaikan semua pesanan dengan tepat waktu.' },
-    { src: '../public/about/Gambar_5.png', alt: 'Keterangan gambar 5', caption: 'Kami bisa membuat berbagai macam kebutuhan pakaian kalian.' },
+    { src: '../public/Image/about/Gambar_1.png', alt: 'Keterangan gambar 1', caption: 'VND Ceper didukung oleh tenaga ahli yang berpengalaman dibidang clothing dan konveksi.' },
+    { src: '../public/Image/about/Gambar_2.png', alt: 'Keterangan gambar 2', caption: 'Didukung dengan alat sablon dan mesin jahit yang modern menghasilkan produk yang berkualitas.' },
+    { src: '../public/Image/about/Gambar_3.png', alt: 'Keterangan gambar 3', caption: 'Hasil berkualitas dan mampu mencukupi kebutuhan produksi kalian.' },
+    { src: '../public/Image/about/Gambar_4.png', alt: 'Keterangan gambar 4', caption: 'Kami berusaha menyelesaikan semua pesanan dengan tepat waktu.' },
+    { src: '../public/Image/about/Gambar_5.png', alt: 'Keterangan gambar 5', caption: 'Kami bisa membuat berbagai macam kebutuhan pakaian kalian.' },
   ];
 
   return (

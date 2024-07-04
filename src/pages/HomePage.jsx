@@ -31,14 +31,14 @@ const HomePage = () => {
               left="0"
               right="0"
               bottom="0"
-              backgroundImage="url('/images/foto_daun.jpg')"
+              backgroundImage="url('/public/Image/images2/foto_daun.jpg')"
               filter="blur(8px)"
               zIndex="-1"
             ></Box>
 
             <Box flex="1" width="100%">
               <Image 
-                src="/images/foto_awal.png"
+                src="/public/Image/images2/foto_awal.png"
                 alt="VND Ceper Industries"
                 boxSize="400px"
                 objectFit="cover"
