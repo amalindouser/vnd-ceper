@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Flex, Heading, Text, Button, Image, IconButton, Link } from '@chakra-ui/react';
+import { Box, Flex, Heading, Text, Button, Image, IconButton, Link, Grid, GridItem } from '@chakra-ui/react';
 import { Link as ScrollLink, Element } from 'react-scroll';
 import { FaWhatsapp } from 'react-icons/fa';
 import About from '../components/About';
@@ -7,7 +7,6 @@ import ProductsProses from '../components/ProductsProses';
 import Products from "../components/Products";
 import Assesments from '../components/Assesments';
 import fotoDaun from '../assets/foto_daun.jpg';
-
 
 const HomePage = () => {
   return (
@@ -38,29 +37,38 @@ const HomePage = () => {
               zIndex="-1"
             ></Box>
 
-            <Box flex="1" width="100%">
-              <Image 
-                src="/image/foto_awal.png"
-                alt="VND Ceper Industries"
-                boxSize="400px"
-                objectFit="cover"
-                borderRadius={10}
-                width="100%"
-              />
-            </Box>
-            <Box flex="2" textAlign="left" p={4} width="100%">
-              <Heading as="h1" size="2xl" mb={4} fontFamily="'Emblema One', cursive" textColor="white">
-                Selamat Datang di VND Ceper Industries
-              </Heading>
-              <Text fontSize="lg" mb={6} textColor="white">
-                Solusi terbaik untuk kebutuhan pakaian jadi Anda.
-              </Text>
-              <ScrollLink to="about" smooth={true} duration={500}>
-                <Button colorScheme="teal" size="lg">
-                  Pelajari Lebih Lanjut
-                </Button>
-              </ScrollLink>
-            </Box>
+            <Grid
+              templateColumns={{ base: '1fr', md: '1fr 2fr' }}
+              gap={4}
+              alignItems="center"
+              width="100%"
+            >
+              <GridItem>
+                <Image 
+                  src="/image/foto_awal.png"
+                  alt="VND Ceper Industries"
+                  boxSize={{ base: '300px', md: '400px' }}
+                  objectFit="cover"
+                  borderRadius={10}
+                  width="100%"
+                />
+              </GridItem>
+              <GridItem>
+                <Box textAlign="left" p={4}>
+                  <Heading as="h1" size="2xl" mb={4} fontFamily="'Emblema One', cursive" textColor="white">
+                    Selamat Datang di VND Ceper Industries
+                  </Heading>
+                  <Text fontSize="lg" mb={6} textColor="white">
+                    Solusi terbaik untuk kebutuhan pakaian jadi Anda.
+                  </Text>
+                  <ScrollLink to="about" smooth={true} duration={500}>
+                    <Button colorScheme="teal" size="lg">
+                      Pelajari Lebih Lanjut
+                    </Button>
+                  </ScrollLink>
+                </Box>
+              </GridItem>
+            </Grid>
           </Flex>
         </Box>
       </Element>
