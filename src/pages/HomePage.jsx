@@ -6,6 +6,8 @@ import About from '../components/About';
 import ProductsProses from '../components/ProductsProses';
 import Products from "../components/Products";
 import Assesments from '../components/Assesments';
+import fotoDaun from '../assets/Image/foto_daun.jpg';
+
 
 const HomePage = () => {
   return (
@@ -31,14 +33,14 @@ const HomePage = () => {
               left="0"
               right="0"
               bottom="0"
-              backgroundImage="url('/public/Image/images2/foto_daun.jpg')"
+              backgroundImage={`url(${fotoDaun})`}
               filter="blur(8px)"
               zIndex="-1"
             ></Box>
 
             <Box flex="1" width="100%">
               <Image 
-                src="/public/Image/images2/foto_awal.png"
+                src="src\assets\Image\foto_awal.png"
                 alt="VND Ceper Industries"
                 boxSize="400px"
                 objectFit="cover"

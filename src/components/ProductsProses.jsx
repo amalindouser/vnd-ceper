@@ -3,14 +3,14 @@ import { Box, Heading, Image, Grid, GridItem } from '@chakra-ui/react';
 
 const Products = () => {
   const products = [
-    { id: 1, src: '../public/Image/product_proses/Gambar_proses_1.jpg'},
-    { id: 2, src: '..//public/Image/product_proses/Gambar_proses_2.jpg'},
-    { id: 3, src: '..//public/Image/product_proses/Gambar_proses_3.jpg'},
-    { id: 4, src: '..//public/Image/product_proses/Gambar_proses_4.jpg'},
-    { id: 5, src: '..//public/Image/product_proses/Gambar_proses_5.jpg'},
-    { id: 6, src: '..//public/Image/product_proses/Gambar_proses_6.jpg'},
-    { id: 7, src: '..//public/Image/product_proses/Gambar_proses_7.jpg'},
-    { id: 8, src: '..//public/Image/product_proses/Gambar_proses_8.jpg'},
+    { id: 1, src: '../src/assets/Image/Gambar_proses_1.jpg'},
+    { id: 2, src: '../src/assets/Image/Gambar_proses_2.jpg'},
+    { id: 3, src: '../src/assets/Image/Gambar_proses_3.jpg'},
+    { id: 4, src: '../src/assets/Image/Gambar_proses_4.jpg'},
+    { id: 5, src: '../src/assets/Image/Gambar_proses_5.jpg'},
+    { id: 6, src: '../src/assets/Image/Gambar_proses_6.jpg'},
+    { id: 7, src: '../src/assets/Image/Gambar_proses_7.jpg'},
+    { id: 8, src: '../src/assets/Image/Gambar_proses_8.jpg'},
   ];
 
   return (

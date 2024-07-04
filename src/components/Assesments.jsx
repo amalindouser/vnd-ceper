@@ -1,7 +1,26 @@
 import React, { useRef } from "react";
 import { Box, HStack, Image, IconButton, Heading } from "@chakra-ui/react";
 import { ArrowLeftIcon, ArrowRightIcon } from "@chakra-ui/icons";
-import assesments from "../utils/assesment";
+
+// Array of assessment image URLs
+const assesments = [
+  "/src/assets/Image/Assesment_1.jpg",
+  "/src/assets/Image/Assesment_2.jpg",
+  "/src/assets/Image/Assesment_3.jpg",
+  "/src/assets/Image/Assesment_4.jpg",
+  "/src/assets/Image/Assesment_5.jpg",
+  "/src/assets/Image/Assesment_6.jpg",
+  "/src/assets/Image/Assesment_7.jpg",
+  "/src/assets/Image/Assesment_8.jpg",
+  "/src/assets/Image/Assesment_9.jpg",
+  "/src/assets/Image/Assesment_10.jpg",
+  "/src/assets/Image/Assesment_11.jpg",
+  "/src/assets/Image/Assesment_12.jpg",
+  "/src/assets/Image/Assesment_13.jpg",
+  "/src/assets/Image/Assesment_14.jpg",
+  "/src/assets/Image/Assesment_15.jpg",
+  "/src/assets/Image/Assesment_16.jpg"
+];
 
 const Assesments = () => {
   const scrollRef = useRef(null);
@@ -21,7 +40,7 @@ const Assesments = () => {
         fontFamily="'Emblema One', cursive"
         textColor='#1D566E'
         textAlign="center"
-        textShadow="2px 2px 4px rgba(0, 0, 0, 0.4)" // Menambahkan bayangan
+        textShadow="2px 2px 4px rgba(0, 0, 0, 0.4)"
       >
         Their Assessment
       </Heading>
