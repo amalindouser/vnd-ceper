@@ -3,7 +3,7 @@ import { Box, Heading, Text, Image, Grid, GridItem } from '@chakra-ui/react';
 
 const About = () => {
   return (
-    <Box p={8} bg="" borderRadius="md" mr={8} mb={8}>
+    <Box p={8} bg="" borderRadius="md"  mb={8}>
       <Heading
         as="h2"
         size="xl"
