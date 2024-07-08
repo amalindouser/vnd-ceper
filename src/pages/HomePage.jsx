@@ -88,7 +88,7 @@ const HomePage = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <Box backgroundColor="#1D566E" padding="8px" width="100%">
+          <Box backgroundColor="#1D566E" padding="8px" width="100%" borderRadius={9}>
             <About />
           </Box>
         </motion.div>
@@ -112,7 +112,7 @@ const HomePage = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <Box backgroundColor="#1D566E" padding="8px" width="100%">
+          <Box backgroundColor="#1D566E" padding="8px" width="100%" borderRadius={9}>
             <Products />
           </Box>
         </motion.div>

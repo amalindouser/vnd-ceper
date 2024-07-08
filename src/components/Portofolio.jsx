@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Box, Image, Text, Spinner, Flex, Center, Grid, GridItem } from '@chakra-ui/react';
+import { Box, Image, Text, Spinner, Grid, GridItem, Heading, Divider } from '@chakra-ui/react';
 
 const Portfolio = () => {
   const [portfolio, setPortfolio] = useState([]);
@@ -8,7 +8,7 @@ const Portfolio = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('https://sheetsu.com/apis/v1.0su/363d7216b60c'); // Ganti dengan URL API Sheetsu baru
+        const response = await fetch('https://sheetsu.com/apis/v1.0su/363d7216b60c'); 
         const data = await response.json();
         setPortfolio(data);
         setLoading(false);
@@ -22,32 +22,38 @@ const Portfolio = () => {
   }, []);
 
   if (loading) {
-    return <Spinner size="xl" />;
+    return (
+      <Box display="flex" justifyContent="center" alignItems="center" minHeight="100vh">
+        <Spinner size="xl" />
+      </Box>
+    );
   }
 
   return (
-    <Grid
-      templateColumns="repeat(auto-fill, minmax(300px, 1fr))"
-      gap={6}
-    >
-      {portfolio.map((item, index) => (
-        <GridItem key={index}>
-          <Box p={4} borderWidth="1px" borderRadius="lg" overflow="hidden">
-            <Image
-              src={item['Image URL']}
-              alt="Portfolio"
-              fallbackSrc="https://via.placeholder.com/150"
-              boxSize="100%"
-              objectFit="cover"
-            />
-            <Box mt={4}>
-              <Text fontSize="xl" fontWeight="bold">{item.Title}</Text>
-              <Text mt={2}>{item.Description}</Text>
+    <Box p={4}>
+      <Heading as="h2" size="xl" textAlign="center" mb={6}>
+        Portfolio
+      </Heading>
+      <Grid templateColumns="repeat(auto-fill, minmax(300px, 1fr))" gap={6}>
+        {portfolio.map((item, index) => (
+          <GridItem key={index}>
+            <Box p={4} borderWidth="1px" borderRadius="lg" overflow="hidden" boxShadow="md">
+              <Image
+                src={item['Image URL']}
+                alt="Portfolio"
+                fallbackSrc="https://via.placeholder.com/300"
+                boxSize="100%"
+                objectFit="cover"
+              />
+              <Box mt={4}>
+                <Divider my={2} />
+                <Text>{item.Description}</Text>
+              </Box>
             </Box>
-          </Box>
-        </GridItem>
-      ))}
-    </Grid>
+          </GridItem>
+        ))}
+      </Grid>
+    </Box>
   );
 };
 
