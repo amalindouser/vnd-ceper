@@ -68,7 +68,7 @@ const Product = () => {
       <Box mt="6" textAlign="center">
         <Button
           as="a"
-          href="../public/dokPricelist/Pricelist vndceper.industries.pdf" // Ganti dengan path yang sesuai
+          href="public\dokPricelist\Pricelist vndceper.industries.pdf"
           download
           colorScheme="blue"
           leftIcon={<DownloadIcon />}
