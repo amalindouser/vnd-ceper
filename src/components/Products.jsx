@@ -68,7 +68,7 @@ const Product = () => {
       <Box mt="6" textAlign="center">
         <Button
           as="a"
-          href='public/dokPricelist/Pricelistvndceperindustries.pdf'
+          href="/dokPricelist/Pricelistvndceperindustries.pdf"
           download
           colorScheme="blue"
           leftIcon={<DownloadIcon />}
