@@ -31,8 +31,14 @@ const Portfolio = () => {
 
   return (
     <Box p={4}>
-      <Heading as="h2" size="xl" textAlign="center" mb={6}>
-        Portfolio
+      <Heading as="h2"
+        size="xl"
+        mb={4}
+        fontFamily="'Emblema One', cursive"
+        textColor='#1D566E'
+        textAlign="center"
+        textShadow="2px 2px 4px rgba(0, 0, 0, 0.4)">
+        Portofolio
       </Heading>
       <Grid templateColumns="repeat(auto-fill, minmax(300px, 1fr))" gap={6}>
         {portfolio.map((item, index) => (
