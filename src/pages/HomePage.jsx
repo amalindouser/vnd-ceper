@@ -51,7 +51,7 @@ const HomePage = () => {
                   border="2px solid black"
                   padding="10px 20px"
                   borderRadius="md"
-                  marginTop="60%"
+                  marginTop="75%"
                 >
                   Pelajari Lebih Lanjut
                 </Button>

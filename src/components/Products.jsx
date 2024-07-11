@@ -57,7 +57,7 @@ const Product = () => {
               <Box>
                 <Text textColor="white">{product.price}</Text>
               </Box>
-              <Box>
+              <Box> 
                 <Text textColor="white">{product.specs}</Text>
               </Box>
             </Box>
