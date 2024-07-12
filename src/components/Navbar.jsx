@@ -4,7 +4,7 @@ import {
 } from '@chakra-ui/react';
 import { FaBars } from 'react-icons/fa';
 import { Link as RouterLink, useLocation } from 'react-router-dom';
-import { Link as ScrollLink, scroller } from 'react-scroll';
+import { scroller } from 'react-scroll';
 
 function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -24,6 +24,7 @@ function Navbar() {
       scroller.scrollTo(to, {
         smooth: true,
         duration: 500,
+        offset: -50, // Adjust as needed based on your layout
       });
     }
   };
@@ -33,7 +34,7 @@ function Navbar() {
       <Flex alignItems="center" maxW="1440px" mx="auto">
         <HStack spacing={4}>
           <Link as={RouterLink} to="/" _hover={{ textDecoration: 'none' }} display="flex" alignItems="center">
-          <Image src="/image/logo_vnd-removebg-preview.png" alt="VND Ceper Industries Logo" boxSize="50px" mr={2} mb={1.5} width={200} />
+            <Image src="/image/logo_vnd-removebg-preview.png" alt="VND Ceper Industries Logo" boxSize="50px" mr={2} mb={1.5} width={200} />
             <Heading
               as="h1"
               size="lg"
@@ -42,25 +43,25 @@ function Navbar() {
               fontWeight="600"
               textColor="white"
             >
-              
+
             </Heading>
           </Link>
         </HStack>
         <Spacer />
         <HStack display={{ base: 'none', md: 'flex' }} spacing={8}>
-          <Link onClick={() => handleNavigation('home')} fontWeight="bold" color={colorPalette.accent} _hover={{ color: colorPalette.highlight }} textColor="white">
+          <Link onClick={() => handleNavigation('home')} fontWeight="bold" color="white" _hover={{ color: colorPalette.highlight }}>
             Home
           </Link>
-          <Link onClick={() => handleNavigation('about')} fontWeight="bold" color={colorPalette.accent} _hover={{ color: colorPalette.highlight }} textColor="white">
+          <Link onClick={() => handleNavigation('about')} fontWeight="bold" color="white" _hover={{ color: colorPalette.highlight }}>
             About Us
           </Link>
-          <Link onClick={() => handleNavigation('products')} fontWeight="bold" color={colorPalette.accent} _hover={{ color: colorPalette.highlight }} textColor="white">
+          <Link onClick={() => handleNavigation('products')} fontWeight="bold" color="white" _hover={{ color: colorPalette.highlight }}>
             Products
           </Link>
-          <Link onClick={() => handleNavigation('contact')} fontWeight="bold" color={colorPalette.accent} _hover={{ color: colorPalette.highlight }} textColor="white">
+          <Link onClick={() => handleNavigation('contact')} fontWeight="bold" color="white" _hover={{ color: colorPalette.highlight }}>
             Contact Us
           </Link>
-          <Link as={RouterLink} to="/portfolio" fontWeight="bold" color={colorPalette.accent} _hover={{ color: colorPalette.highlight }} textColor="white">
+          <Link as={RouterLink} to="/portfolio" fontWeight="bold" color="white" _hover={{ color: colorPalette.highlight }}>
             Portfolio
           </Link>
         </HStack>
@@ -82,19 +83,19 @@ function Navbar() {
           <DrawerHeader>VND Ceper Industries</DrawerHeader>
           <DrawerBody>
             <VStack spacing={4} align="start">
-              <Link onClick={() => { handleNavigation('home'); onClose(); }} fontWeight="bold" color={colorPalette.accent} _hover={{ color: colorPalette.highlight }}>
+              <Link onClick={() => { handleNavigation('home'); onClose(); }} fontWeight="bold" color="black" _hover={{ color: colorPalette.highlight }}>
                 Home
               </Link>
-              <Link onClick={() => { handleNavigation('about'); onClose(); }} fontWeight="bold" color={colorPalette.accent} _hover={{ color: colorPalette.highlight }}>
+              <Link onClick={() => { handleNavigation('about'); onClose(); }} fontWeight="bold" color="black" _hover={{ color: colorPalette.highlight }}>
                 About Us
               </Link>
-              <Link onClick={() => { handleNavigation('products'); onClose(); }} fontWeight="bold" color={colorPalette.accent} _hover={{ color: colorPalette.highlight }}>
+              <Link onClick={() => { handleNavigation('products'); onClose(); }} fontWeight="bold" color="black" _hover={{ color: colorPalette.highlight }}>
                 Products
               </Link>
-              <Link onClick={() => { handleNavigation('contact'); onClose(); }} fontWeight="bold" color={colorPalette.accent} _hover={{ color: colorPalette.highlight }}>
+              <Link onClick={() => { handleNavigation('contact'); onClose(); }} fontWeight="bold" color="black" _hover={{ color: colorPalette.highlight }}>
                 Contact Us
               </Link>
-              <Link as={RouterLink} to="/portfolio" fontWeight="bold" color={colorPalette.accent} _hover={{ color: colorPalette.highlight }} onClick={onClose}>
+              <Link as={RouterLink} to="/portfolio" fontWeight="bold" color="black" _hover={{ color: colorPalette.highlight }} onClick={onClose}>
                 Portfolio
               </Link>
             </VStack>
