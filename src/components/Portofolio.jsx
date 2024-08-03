@@ -8,7 +8,7 @@ const Portfolio = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('https://sheetsu.com/apis/v1.0su/363d7216b60c'); 
+        const response = await fetch('https://sheetdb.io/api/v1/51nbc5vik315y'); 
         const data = await response.json();
         setPortfolio(data);
         setLoading(false);
