@@ -9,6 +9,7 @@ import ProductsProses from './components/ProductsProses';
 import Assesments from './components/Assesments';
 import PortofolioPage from './pages/PortofolioPage'; // Import PortfolioPage
 import Footer from './components/Footer'; // Import Footer
+import { Analytics } from '@vercel/analytics/react'; // Import Analytics dari @vercel/analytics/react
 
 const App = () => {
   const location = useLocation();
@@ -33,6 +34,7 @@ const App = () => {
           </Routes>
         </Box>
         <Footer /> {/* Tambahkan Footer di sini */}
+        <Analytics /> {/* Tambahkan Analytics di sini */}
       </Box>
     </ChakraProvider>
   );
