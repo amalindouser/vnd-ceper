@@ -1,15 +1,23 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Box, ChakraProvider } from '@chakra-ui/react';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, useLocation } from 'react-router-dom';
+import { trackPage } from './analytics'; // Import fungsi dari file analytics.jsx
 import Navbar from './components/Navbar';
 import About from './components/About';
 import HomePage from './pages/HomePage';
 import ProductsProses from './components/ProductsProses';
 import Assesments from './components/Assesments';
-import PortfolioPage from './pages/PortofolioPage'; // Import PortfolioPage
+import PortofolioPage from './pages/PortofolioPage'; // Import PortfolioPage
 import Footer from './components/Footer'; // Import Footer
 
 const App = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    // Kirim pageview ke Google Analytics setiap kali lokasi berubah
+    trackPage(location.pathname + location.search);
+  }, [location]);
+
   return (
     <ChakraProvider>
       <Box>
@@ -20,7 +28,7 @@ const App = () => {
             <Route path="/about" element={<About />} />
             <Route path="/products" element={<ProductsProses />} />
             <Route path="/assesments" element={<Assesments />} />
-            <Route path="/portfolio" element={<PortfolioPage />} /> {/* Tambahkan rute untuk PortfolioPage */}
+            <Route path="/portfolio" element={<PortofolioPage />} /> {/* Tambahkan rute untuk PortfolioPage */}
             {/* Tambahkan rute lainnya di sini */}
           </Routes>
         </Box>
